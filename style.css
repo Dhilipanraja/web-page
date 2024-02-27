@@ -8,6 +8,16 @@ h1, h2, h3, h4, h5, h6 {
 body { 
     font-family: 'Open Sans', sans-serif; 
   } 
+ #button{
+   background:#1E90FF;
+   width:20%;
+   color:white;
+   border-radius:5px;
+   cursor:pointer;}
+#button:hover,#button:focus,#button:active{
+  box-shadow:0 0 20px rgba(0,0,0,0.5);
+  -webkit-transform:scale(1.1);
+  transform:scale(1.1);}
    
   /* container-1 */ 
   #container-1 { 
