@@ -4,25 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>static webpage</title>
   <script src="https://kit.fontawesome.com/95bb7036ba.js"crossorigin="anonymous">
   </script>
-  <script>
-  function darkMode(){
-    let element=document.body;
-    element.className="dark-mode";
-  }
-    function lightMode(){
-      let element=document.body;
-      element.className="light-mode";
-    }
-  </script>
-  
-
-</head>
+  <style>
+        body {
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            background-color: #000000;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        button:hover {
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+    </style>
+ </head>
 
 <body>
   <section id="container-1">
@@ -33,10 +44,20 @@
           <p class="nav-items"><a href="#">Features</a></p>
           <p class="nav-items"><a href="#">Team</a></p>
           <p class="nav-items"><a href="#">Sign In</a></p>
-          <button id="button" onclick="darkMode()">Darkmode</button>
-          <button id="button" onclick="lightMode()">Lightmode</button>
-          
-        </div>
+           <button id="toggleButton">theme</button>
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', function () {
+            var body = document.body;
+            if (body.style.backgroundColor === 'rgb(0, 0, 0)') {
+                body.style.backgroundColor = '#FFFFFF';
+                body.style.color = '#000000';
+            } else {
+                body.style.backgroundColor = '#000000';
+                body.style.color = '#FFFFFF';
+            }
+        });
+    </script>
+         </div>
         
       </div>
     </div>
@@ -49,10 +70,6 @@
           Access them wherever you need, share and collaborate with friends,
           family, and co-workers.</p>
         <input class="btn-email" id="email" type="email" placeholder="Enter your email..." aria-label="btn-email">
-      
-              
- 
-
         <input class="btn-getstarted" type="button" value="Get Started">
       </div>
     </div>
